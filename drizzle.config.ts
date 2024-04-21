@@ -3,8 +3,9 @@ import { defineConfig } from "drizzle-kit"
 export default defineConfig({
   schema: "./db/schema/index.ts",
   out: "./migrations",
-  driver: "better-sqlite",
+  driver: "turso",
   dbCredentials: {
-    url: "./sqlite.db",
+    url: process.env.DATABASE_URL!,
+    authToken: process.env.DATABASE_AUTH_TOKEN!,
   },
 })

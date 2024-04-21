@@ -1,4 +1,5 @@
 import { getTableName } from "drizzle-orm"
+
 import { db } from "../drizzle"
 import { userTable } from "../schema"
 
